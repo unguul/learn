@@ -6,7 +6,7 @@ taxonomy:
     category: docs
 ---
 
->>> If this is your first time installing UserFrosting or if you're not already familiar with setting up a local environment, this page will guide you in setting up your first local environment using Homestead. If you already have a local environment (e.g., LAMP or LEMP) and you're already familiar with **composer**, the [Native Installation](/installation/environment/native) guide is for you.
+If this is your first time installing UserFrosting or if you're not already familiar with setting up a local environment, this page will guide you in setting up your first local environment using Homestead. If you already have a local environment (e.g., LAMP or LEMP) and you're already familiar with **composer**, the [Native Installation](/installation/environment/native) guide is for you.
 
 ## Why you need a development environment
 
@@ -33,19 +33,15 @@ In the long run, the amount of time you'll spend uploading your code after each 
 
 When you run your code in a place that is accessible only to you and where it's ok when something breaks, this is referred to as a **development environment.**  When you upload your so that it is running live and interacting with real visitors to your site, this is called a **production environment.**
 
-## Virtualbox, Vagrant and Homestead
-
-
 
 ### Setting up Homestead
 
-Install [Vagrant](https://scotch.io/tutorials/get-vagrant-up-and-running-in-no-time) and [Homestead](https://scotch.io/tutorials/getting-started-with-laravel-homestead).
+1. Install [Vagrant](https://scotch.io/tutorials/get-vagrant-up-and-running-in-no-time). Make sure that the directories you map in `Homestead.yaml` exist _before_ you run `vagrant up`.  Otherwise, you will need to reload your virtual machine using `vagrant reload --provision` so that Homestead has a chance to find your directories.
+2. Install [Homestead](https://scotch.io/tutorials/getting-started-with-laravel-homestead)
+3. Head [over here for the next steps](/installation/environment/native#ClonetheUserFrostingrepository).
 
-After you've set up Vagrant and Homestead, installation is the same as that for a [native environment](/installation/environment/native#GetUserFrosting).
-
-To contribute to this documentation, please submit a pull request to our [learn repository](https://github.com/userfrosting/learn/tree/master/pages).
-
-
-Make sure that the directories you map in `Homestead.yaml` exist _before_ you run `vagrant up`.  Otherwise, you will need to reload your virtual machine using `vagrant reload --provision` so that Homestead has a chance to find your directories.
+## Virtualbox, Vagrant and Homestead
 
 Install VirtualBox 5.1.18
+To contribute to this documentation, please submit a pull request to our [learn repository](https://github.com/userfrosting/learn/tree/master/pages).
+
