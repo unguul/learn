@@ -1,22 +1,22 @@
 ---
 title: Quick Start Guide
 metadata:
-    description: UserFrosting is a free, open-source jumping-off point for building user-centered web applications with PHP and Javascript.
+    description: UserFrosting is a free, open-source framework for building user-centered web applications with PHP and Javascript.
 taxonomy:
     category: docs
 ---
 
 >>>>> This quick start guide is aimed at experienced PHP developers who already have a development environment set up. Head over to the [Installation Chapter](/installation) for the complete guide.
 
-UserFrosting is a free, open-source jumping-off point for building user-centered web applications with PHP and Javascript.  It comes with a sleek, modern interface, basic user account features, and an administrative user management system - all fully functioning out of the box.
+UserFrosting is a free, open-source framework for building user-centered web applications with PHP and Javascript.  It comes with basic user account features, a user management system, and a sleek modern interface - all fully functioning out of the box.
 
->>>> This is the documentation for UserFrosting 4.  If you are looking for documentation for previous versions of UserFrosting, please see [here](http://v3.userfrosting.com).
+>>>> This is the documentation for UserFrosting 4.  If you need documentation for previous versions of UserFrosting, please go [here](http://v3.userfrosting.com).
 
 ## Server Requirements
 
-UserFrosting has a few system requirements. Of course, all of these requirements are satisfied by the [Homestead](/installation/environment/homestead) virtual machine, so it's highly recommended that you use Homestead as your local UserFrosting development environment.
+UserFrosting has a few system requirements. These requirements are satisfied by the [Homestead](/installation/environment/homestead) virtual machine, so it's highly recommended that you use Homestead as your local UserFrosting development environment.
 
-However, if you are not using Homestead, you will need to make sure your local UserFrosting development environment meets the following requirements:
+However, if you are not using Homestead, please make sure your local development environment meets the following requirements:
 
 - Web server software (Apache, Nginx, IIS, etc)
 - PHP **5.6** or higher
@@ -62,13 +62,16 @@ After installing UserFrosting, you should configure your web server's document /
 
 ## Directory Permissions
 
-UserFrosting needs to be able to write to the file system for a few directories:
+UserFrosting needs to be able to write to the file system for a few directories. Give the group under which your webserver runs read/write permissions for:
 
 - `/app/cache`
 - `/app/logs`
 - `/app/sessions`
 
+
 ## Web Server Configuration
+
+Follow the directions for your specific web server:
 
 ### Apache
 
