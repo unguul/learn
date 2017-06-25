@@ -6,25 +6,27 @@ taxonomy:
     category: docs
 ---
 
-One of the most common misconceptions is that web applications are coherent pieces of software that sit on a server somewhere, and that the client "runs" this application in their browser.  This is actually an illusion, carefully crafted to provide a smooth experience for the end user.
+One of the most common misconceptions is that web applications are coherent pieces of software that a client "runs" in their browser.  This is actually an illusion, crafted to provide a smooth experience for the end user.
 
-In reality, web applications are *conversations* between two agents with very poor memory - the **server**, and the **client** - which may be a web browser, mobile app, or another application.  In modern web applications both the client *and* the server are typically going to need to run some code throughout their conversation.  What's more, in the case of a PHP application, the client and server don't even speak the same language!  The server runs only PHP, while the client runs only Javascript.  (Note that there *are* server-side Javascript stacks, but we do not use them.)
+In reality, web applications are *conversations* between two agents - the **server** and the **client**. The client may be a web browser, mobile app, or other application. The server may be Apache, NGNIX, IIS, or some other server. In modern web applications, both the client *and* the server typically need to run some code.  What's more, in the case of a PHP application, the client and server don't even speak the same language!  The server runs only PHP, while the client runs only Javascript.  (There are server-side Javascript stacks, but we do not use them.)
 
 ## Server-side versus client-side code
 
-Beginning developers are often confused by this, and you see questions on Stack Overflow like "how do I get my PHP in my Javascript" or "how do I keep the user from downloading the PHP and seeing my API keys?"  These questions come from a misconception that users are actually *downloading* PHP files and then somehow running the scripts in their browser.  This misconception is exacerbated by the way that web servers like Apache, by default, use the name and relative path of a PHP script as the URL required to run that script.  Thus, it's easy to conclude that visiting **http://owlfancy.com/admin/login.php** is causing your browser to download **login.php** and run the script in that file.  But this is not the case!
+Beginning developers are often confused by the difference between server-side and client-side code.  You may have seen questions on Stack Overflow like "how do I get my PHP in my Javascript" or "how do I keep the user from downloading the PHP and seeing my API keys?"
+
+These questions come from a misconception that users are actually *downloading* PHP files and running the scripts in their browser.  It's easy to conclude that visiting **http://owlfancy.com/login.php** is causing your browser to download **login.php** and run the script in that file.  But this is not the case!
 
 ### Server-side code
 
-What actually happens is that users, through their browsers (clients), make a **request** to the **web server** for a **resource**.  This is usually done via a Uniform **Resource** Locator, better known as a URL.  The web server generates a **response** to the request, and in the case of image, Javascript, CSS, and other static resources, it often does simply return the contents of the corresponding file.  But when the client requests a resource that is mapped to a PHP script, the web server doesn't return the contents of the script.  Instead, it *executes* the script on the server and returns the *output* of that script.
+When a user visits **http://owlfancy.com/login.php**, the user's browser  makes a **request** to the **web server** for a **resource**.  This is done via a Uniform Resource Locator, better known as a URL.  The web server generates a **response** to the request. In the case of image, Javascript, CSS, or other static resource, it returns the contents of the corresponding file.  But when the client requests a resource that is mapped to a PHP script, the web server doesn't return the contents of the script.  Instead, it *executes* the script on the server and returns the *output* of that script.
 
-In the case of a web page, the output is usually an HTML document.  However, a server-side script could produce JSON, XML, Javascript, CSS, or even dynamically generated images as its response.  What's important is that the actual code of the script is never sent to the client - if it were, this could open all sorts of security risks!
+The output is usually an HTML document, but in many cases it could be Javascript, CSS, JSON, XML, or even a dynamically generated image.  What's important is that the actual code of the script is never sent to the client.
 
 ### Client-side code
 
-There are cases when the server *does* need to send code back to the client.  For example, we might want to allow the client to automatically check if the information filled into a form is syntactically valid, without having to submit another request to the server.  For this to work, we need a language that is universally understood by all types of browsers and clients.  Luckily for us, such a language exists - it's called Javascript.
+There are cases when the server *does* need to send a script back to the client.  For example, checking if the information filled in a form is syntactically valid.  For this to work, we need a language that is  understood by both all kinds of clients (any browser, app, phone, etc).  Lucky for us, such a language exists - it's called Javascript.
 
-When you visit any modern web page, you first get the page itself (usually an HTML document), but then it contains a bunch of references to images, Javascript files, CSS files, and all sorts of other resources that are meant to enhance your experience of the page.  Your browser is smart enough to see those references, and automatically request those resources as well.  Then when it's finished grabbing a resource, it takes some action - displaying an image on the page, running some Javascript code, or modifying the styles of elements on the page.
+When you visit any modern web page, you first get the page itself, usually an HTML document. Then you get references to images, Javascript files, CSS files, and all sorts of resources that enhance your experience of the page.  Your browser sees the references and automatically requests the resources. When it's finished grabbing a resource, it takes some action - displaying an image, running some Javascript, or modifying styles.
 
 Thus, to answer the questions from earlier:
 
