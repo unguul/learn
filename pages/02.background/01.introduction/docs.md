@@ -16,11 +16,11 @@ This breakneck pace has caused a lot of people to get left behind.  For someone 
 
 The problem is that when you're a busy developer with a lot of Real-Life (tm) projects to work on, it's very difficult to set aside time to read a book about technology X - especially when you're not even sure that you really _need_ to learn X!
 
-UserFrosting has a better idea.  Instead of learning about these technologies as a purely academic exercise, you'll work on one of _your_ projects, and learn what you need as you go!
+UserFrosting has a better idea.  Instead of learning about these technologies as a purely academic exercise, you'll work on one of _your_ projects, and learn what you need as you go.
 
 ## What exactly will I learn?
 
-There are three main categories that UserFrosting attempts to cover: software architecture, tools of the trade, and best practices.  Most of the PHP developers we see in chat or on Stack Overflow are behind in at least one these areas:
+There are three main categories that UserFrosting attempts to cover: software architecture, tools of the trade, and best practices.  Many PHP developers we meet in [our chatroom](/troubleshooting/getting-help#Chat) or on [Stack Overflow](troubleshooting/getting-help#StackExchange) are behind in at least one these areas:
 
 ### Software architecture
 
@@ -47,3 +47,5 @@ There are three main categories that UserFrosting attempts to cover: software ar
 - Debugging
 - Test-driven development
 - Deployment strategies ("going live")
+
+By working on your project, you will get introduced to or even master these concepts, tools, and practices.
