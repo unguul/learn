@@ -24,7 +24,7 @@ The output is usually an HTML document, but in many cases it could be Javascript
 
 ### Client-side code
 
-There are cases when the server *does* need to send a script back to the client.  For example, checking if the information filled in a form is syntactically valid.  For this to work, we need a language that is  understood by both all kinds of clients (any browser, app, phone, etc).  Lucky for us, such a language exists - it's called Javascript.
+There are cases when the server *does* need to send a script back to the client.  For example, you might want to allow the client to automatically check if the information filled in a form is syntactically valid.  For this to work, we need a language that is  understood by both all kinds of clients (any browser, app, phone, etc).  Lucky for us, such a language exists - it's called Javascript.
 
 When you visit any modern web page, you first get the page itself, usually an HTML document. Then you get references to images, Javascript files, CSS files, and all sorts of resources that enhance your experience of the page.  Your browser sees the references and automatically requests the resources. When it's finished grabbing a resource, it takes some action - displaying an image, running some Javascript, or modifying styles.
 
