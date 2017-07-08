@@ -267,16 +267,11 @@ Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-66-generic x86_64)
 157 packages can be updated.
 58 updates are security updates.
 
-
 Last login: Wed Jun 21 06:42:59 2017 from 10.0.2.2
 vagrant@homestead:~$ 
 ```
 
 If you try the `ls` command, you should see the `userfrosting` directory that you had mapped in your `Homestead.yaml` file.  If you don't see this directory, double-check your `Homestead.yaml`, log out of the virtual machine (`exit`) and then reload the virtual machine (`vagrant reload --provision`).
-
-### Installing UserFrosting
-
-Now that you've logged into the virtual machine and have all the mappings properly set up, you can finish installing UserFrosting.
 
 ### Troubleshooting Homestead 
 
@@ -300,6 +295,12 @@ databases:
 3. For more help with Homestead visit [Homestead's documentation](https://www.sitepoint.com/quick-tip-get-homestead-vagrant-vm-running/). If that doesn't help, join us in [chat](https://chat.userfrosting.com).
 
 4. Keep in mind, yaml files are white-space sensititve. Look for typos in your yaml file, including whitespace. For help with YAML sytax, check out Grav's [YAML Basic Rules](https://learn.getgrav.org/advanced/yaml) or [YAML to JSON](https://www.json2yaml.com/convert-yaml-to-json).
+
+
+
+### Installing UserFrosting
+
+Now that you've logged into the virtual machine and have all the mappings properly set up, you can finish installing UserFrosting.
 
 
 #### Composer dependencies
