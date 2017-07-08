@@ -43,5 +43,9 @@ redirects:
     /forms-and-tables: /client-side-code/components
     /forms-and-tables/forms: /client-side-code/components/forms
     /forms-and-tables/tables: /client-side-code/components/tables
+    /security: /background/security
     /going-live/seo: /background/seo
-    
+    /going-live/build: /going-live/vps-production-environment
+    /going-live/ssl: /going-live/vps-production-environment/ssl
+    /going-live/cron: /going-live/unix-primer-ubuntu
+    /recipes/hosting-with-iis: /installation/other-situations/iis

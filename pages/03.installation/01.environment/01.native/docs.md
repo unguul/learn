@@ -150,8 +150,7 @@ origin	https://github.com/userfrosting/UserFrosting.git (push)
 This basically means that `origin` is a shortcut for pushing and pulling to the official UserFrosting repository on GitHub.  Let's change that:
 
 ```bash
-$ git remote rm origin
-$ git remote add upstream https://github.com/userfrosting/UserFrosting.git
+$ git remote rename origin upstream
 $ git remote -v
 upstream	https://github.com/userfrosting/UserFrosting.git (fetch)
 upstream	https://github.com/userfrosting/UserFrosting.git (push)
@@ -178,7 +177,7 @@ $ git merge upstream/master
 
 See GitHub's article on [syncing a fork](https://help.github.com/articles/syncing-a-fork/) for more information.
 
-If you are developing as part of a team, you may wish to set up a _new_ `origin` remote, for example one that points to a private repo on Bitbucket. When you are ready to deploy, you may also set up yet another `deploy` remote, which will allow you to push your code directly to the production server. See [deployment](/going-live/deployment) for more information.
+If you are developing as part of a team, you may wish to set up a _new_ `origin` remote, for example one that points to a private repo on Bitbucket. When you are ready to deploy, you may also set up yet another `deploy` remote, which will allow you to push your code directly to the production server. See [deployment](/going-live/vps-production-environment/git-for-deployment) for more information.
 
 ## Star the project and follow us on Twitter
 
