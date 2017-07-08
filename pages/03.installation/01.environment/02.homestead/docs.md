@@ -272,6 +272,30 @@ If you try the `ls` command, you should see the `userfrosting` directory that yo
 
 Now that you've logged into the virtual machine and have all the mappings properly set up, you can finish installing UserFrosting.
 
+### Troubleshooting Homestead 
+
+1. Everytime you change your `homestead.yaml` file, you need to exit the virtual machine by entering the `exit` command from inside your `homestead` folder, then reprovision with `vagrant reload --provision` and login to the vm again with `vagrant ssh`.
+
+2. Make sure that your homestead.yaml file looks something like this:
+
+```
+folders:
+    - map: ~/dev/folderwhereidownloadeduserfrosting           
+      to: /home/vagrant/mysitename
+      
+sites:
+    - map: mysitename.app
+      to: /home/vagrant/mysitename/public
+      
+databases:
+    - mydatabasename
+```
+
+3. For more help with Homestead visit [Homestead's documentation](https://www.sitepoint.com/quick-tip-get-homestead-vagrant-vm-running/). If that doesn't help, join us in [chat](https://chat.userfrosting.com).
+
+4. Keep in mind, yaml files are white-space sensititve. Look for typos in your yaml file, including whitespace. For help with YAML sytax, check out Grav's [YAML Basic Rules](https://learn.getgrav.org/advanced/yaml) or [YAML to JSON](https://www.json2yaml.com/convert-yaml-to-json).
+
+
 #### Composer dependencies
 
 This will install UserFrosting's dependencies:
